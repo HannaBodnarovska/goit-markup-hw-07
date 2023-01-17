@@ -180,7 +180,6 @@ h4 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
     z-index: 999;
   
     transform: translateX(100%);
@@ -255,6 +254,8 @@ h4 {
     display: flex;
     justify-content: space-between;
     margin-top: 48px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 
@@ -652,6 +653,8 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    justify-content: flex-start;
+    margin-left: 14%;
     padding-top: 96px;
     padding-bottom: 96px;
 }
@@ -1193,7 +1196,6 @@ h4 {
     background-color: var(--dark);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
-    margin-right: 24px;
     color: var(--white);
     font-weight: 600;
     font-size: 12px;
@@ -1216,9 +1218,10 @@ h4 {
 
 .navigation-content--current a {
     color: var(--primary-brand);
+    position: relative;
 }
 
-.navigation-content--current::after {
+.navigation-content--current a::after {
     content: "";
     position: absolute;
     width: 100%;
